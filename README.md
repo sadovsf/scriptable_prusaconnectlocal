@@ -5,12 +5,12 @@ Widget to show 3D printer details supported by Prusa Connect local API
 [Scriptable for iOS](https://apps.apple.com/us/app/scriptable/id1405459188)
 
 ## Setup
-* copy widget to scriptable
-* add scriptable widget (medium size) to homescreen
-* widget config:
+* Copy widget to scriptable
+* Add scriptable widget (medium size)
+* Widget config:
     * Script: choose script
     * When interacting: Run Script
-    * Parameter: ip address to prusa printer
+    * Parameter: ip address to prusa printer, username, password   ( everything is delimited by comma example: 192.168.0.1, that_guy, my_awesome_password )
 
 ## Screenshots
 
@@ -29,4 +29,6 @@ Widget to show 3D printer details supported by Prusa Connect local API
 
 
 ## getting into the code
-* script is starting with ```main()``` after class definitions
+* You need to have npm. To install dependencies call `npm install` in root folder.
+* Main entry point is in ```main.ts```
+* To build you js bundle use defined ```package.json``` action or call `rollup --config rollup.config.ts --environment file_path:./src/main.ts --configPlugin @rollup/plugin-typescript` in root folder.
